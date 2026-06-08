@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, useSpring, motion } from 'framer-motion';
 
 const FRAME_COUNT = 358;
-const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dacwce9cv/image/upload/q_auto/f_auto/v1780949990/keyboard";
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dacwce9cv/image/upload/q_auto/f_auto/v1780949990/keyboardvite";
 
 export default function KeyboardExperience() {
     const containerRef = useRef<HTMLDivElement>(null);
