@@ -3,11 +3,11 @@ import { useLenis } from './hooks/useLenis';
 import { CustomCursor } from './ui/CustomCursor';
 import { AmbientGlow } from './ui/AmbientGlow';
 import { Header } from './ui/Header';
-import { HeroSequence } from './components/HeroSequence';
 import { PremiumShowcase } from './components/PremiumShowcase';
 import { Testimonials } from './components/Testimonials';
 import { AboutContact } from './components/AboutContact';
 import { Footer } from './components/Footer';
+import KeyboardExperience from './components/KeyboardExperience';
 
 function App() {
   useLenis(); // Initialize smooth scroll
@@ -19,12 +19,12 @@ function App() {
       <CustomCursor frameProgress={frameProgress} />
       <Header />
       
-      <HeroSequence onProgress={setFrameProgress} />
+      {/* 3D Scroll Animation Connected directly to Cloudinary */}
+      <KeyboardExperience />
       
       <PremiumShowcase />
       <Testimonials />
       <AboutContact />
-      
       <Footer />
     </div>
   );
