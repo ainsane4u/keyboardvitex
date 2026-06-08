@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #0f0f10;
+  --color-primary: #ffffff;
+  --color-secondary: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-accent: #d4d4d8;
+  --background-highlight: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15));
+
+  --font-heading: "Neue Montreal", sans-serif;
+  --font-body: "Geist", sans-serif;
+
+  --text-hero: 96px;
+  --text-section-title: 72px;
+  --text-subtitle: 28px;
+  --text-body: 18px;
+  --text-button: 14px;
+
+  --color-gold-light: #ffe58f;
+  --color-gold-base: #d4af37;
+  --color-gold-dark: #8b6508;
+  --font-display: "Playfair Display", serif;
+}
+
+@utility bg-halftone {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(180deg, var(--color-gold-light) 0%, var(--color-gold-base) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.04em;
+  }
+
+  .text-hero {
+    font-size: var(--text-hero);
+    letter-spacing: -0.06em;
+  }
+
+  .text-section-title {
+    font-size: var(--text-section-title);
+  }
+
+  .text-subtitle {
+    font-size: var(--text-subtitle);
+  }
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Cursor default hidden for elements interacting with it */
+* {
+  cursor: none;
+}
